@@ -20,13 +20,13 @@ const ShopContextProvider = (props) => {
 
 
   useEffect(() => {
-    fetch('https://ecommerce-backend-ff4x.onrender.com/allproducts')
+    fetch('http://localhost:4000/allproducts')
       .then((response) => response.json())
       .then((data) => setAll_Product(data))
       .catch((error) => console.log(error));
 
     if (localStorage.getItem('auth-token')) {
-      fetch('https://ecommerce-backend-ff4x.onrender.com/getcart', {
+      fetch('http://localhost:4000/getcart', {
         method: 'POST',
         headers: {
           Accept: 'application/form-data',
@@ -42,7 +42,7 @@ const ShopContextProvider = (props) => {
     const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     if (localStorage.getItem('auth-token')) {
-      fetch('https://ecommerce-backend-ff4x.onrender.com/addtocart', {
+      fetch('http://localhost:4000/addtocart', {
         method: 'POST',
         headers: {
           Accept: 'application/form-data',
@@ -59,7 +59,7 @@ const ShopContextProvider = (props) => {
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
     if (localStorage.getItem('auth-token')) {
-      fetch('https://ecommerce-backend-ff4x.onrender.com/removefromcart', {
+      fetch('http://localhost:4000/removefromcart', {
         method: 'POST',
         headers: {
           Accept: 'application/form-data',
@@ -77,7 +77,7 @@ const ShopContextProvider = (props) => {
   const increment = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     if (localStorage.getItem('auth-token')) {
-      fetch('https://ecommerce-backend-ff4x.onrender.com/increment', {
+      fetch('http://localhost:4000/increment', {
         method: 'POST',
         headers: {
           Accept: 'application/form-data',
@@ -95,7 +95,7 @@ const ShopContextProvider = (props) => {
   const decrement = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
     if (localStorage.getItem('auth-token')) {
-      fetch('https://ecommerce-backend-ff4x.onrender.com/decrement', {
+      fetch('http://localhost:4000/decrement', {
         method: 'POST',
         headers: {
           Accept: 'application/form-data',
