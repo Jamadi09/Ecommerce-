@@ -1,4 +1,4 @@
-const port = 4000;
+const port = process.env.PORT || 4000;
 const express = require('express');
 const app = express();
 const mongoose = require("mongoose");
@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 // Database connection with MongoDB
-mongoose.connect("mongodb+srv://chiboy:07064630566@cluster0.m2b5eyt.mongodb.net/e-commerce");
+mongoose.connect("mongodb+srv://talk2joel12:07064630566@cluster0.8ulaaj3.mongodb.net/e-commerce");
 //API Creation
 
 app.get("/",(req, res)=>{

@@ -3,12 +3,12 @@ import './AddProduct.css'
 import upload_area from '../../assets/upload_area.svg'
 
 const AddProduct = () => {
-
-    const[image, setImage] = useState(false);
+  
+     const[image, setImage] = useState(false);
     const[productDetails, setProductDetails] = useState({
         name: "",
         image: "",
-        category:"women",
+        category: "women",
         new_price: "",
         old_price:"",
     })
@@ -83,6 +83,7 @@ const AddProduct = () => {
                     <option value="men">Men</option>
                     <option value="kid">Kid</option>
                 </select>
+                      
             </div>
             <div className="addproduct-itemfield">
                 <label htmlFor="file-input">
