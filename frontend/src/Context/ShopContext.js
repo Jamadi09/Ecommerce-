@@ -20,7 +20,7 @@ const ShopContextProvider = (props) => {
 
 
   useEffect(() => {
-    fetch('http://localhost:4000/allproducts')
+    fetch('https://ecommerce-backend1-eaty.onrender.com/allproducts')
       .then((response) => response.json())
       .then((data) => setAll_Product(data))
       .catch((error) => console.log(error));
