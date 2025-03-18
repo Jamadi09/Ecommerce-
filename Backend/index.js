@@ -1,4 +1,4 @@
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || https://ecommerce-backend1-eaty.onrender.com;
 const express = require('express');
 const app = express();
 const mongoose = require("mongoose");
@@ -37,7 +37,7 @@ app.use('/images', express.static('upload/images'))
 app.post("/upload",upload.single('product'),(req, res)=>{
      res.json({
         success:1,
-        image_url: `http://localhost:${port}/images/${req.file.filename}`
+        image_url: `https://ecommerce-backend1-eaty.onrender.com:${port}/images/${req.file.filename}`
      })
 })
 
