@@ -45,7 +45,7 @@ const ListProduct = () => {
         {allproducts.map((product, index)=>{
             return <>
             <div key={index} className="listproduct-format-main listproduct-format">
-               <img src=https://ecommerce-backend1-eaty.onrender.com/product.image alt="" className="listproduct-product-icon" />
+               <img src=https://ecommerce-backend1-eaty.onrender.com/images/product.image alt="" className="listproduct-product-icon" />
                <p>{product.name}</p>
                <p>#{product.old_price}</p>
                <p>#{product.new_price}</p>
