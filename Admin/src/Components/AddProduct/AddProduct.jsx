@@ -32,7 +32,7 @@ const AddProduct = () => {
         let formData = new FormData();
         formData.append('product',image);
 
-         await fetch('https://ecommerce-backend1-eaty.onrender.com//upload',{
+         await fetch('https://ecommerce-backend1-eaty.onrender.com/upload',{
             method:'POST',
             headers:{
                 Accept:'application/json',
@@ -44,7 +44,7 @@ const AddProduct = () => {
             {
                 product.image = responseData.image_url;
                 console.log(product);
-                await fetch('https://ecommerce-backend1-eaty.onrender.com//addproduct', {
+                await fetch('https://ecommerce-backend1-eaty.onrender.com/addproduct', {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',
