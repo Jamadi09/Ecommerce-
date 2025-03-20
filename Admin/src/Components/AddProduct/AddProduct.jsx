@@ -7,7 +7,7 @@ const AddProduct = () => {
      const[image, setImage] = useState(false);
     const[productDetails, setProductDetails] = useState({
         name: "",
-        image: "",
+        image: "https://ecommerce-backend-ldbc.onrender.com/images/product1.png",
         category: "women",
         new_price: "",
         old_price:"",
