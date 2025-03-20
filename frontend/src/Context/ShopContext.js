@@ -20,13 +20,13 @@ const ShopContextProvider = (props) => {
 
 
   useEffect(() => {
-    fetch('https://ecommerce-backend1-eaty.onrender.com/allproducts')
+    fetch('https://ecommerce-backend-ldbc.onrender.com/allproducts')
       .then((response) => response.json())
       .then((data) => setAll_Product(data))
       .catch((error) => console.log(error));
 
     if (localStorage.getItem('auth-token')) {
-      fetch('https://ecommerce-backend1-eaty.onrender.com/getcart', {
+      fetch('https://ecommerce-backend-ldbc.onrender.com/getcart', {
         method: 'POST',
         headers: {
           Accept: 'application/form-data',
@@ -42,7 +42,7 @@ const ShopContextProvider = (props) => {
     const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     if (localStorage.getItem('auth-token')) {
-      fetch('https://ecommerce-backend1-eaty.onrender.com/addtocart', {
+      fetch('https://ecommerce-backend-ldbc.onrender.com/addtocart', {
         method: 'POST',
         headers: {
           Accept: 'application/form-data',
@@ -59,7 +59,7 @@ const ShopContextProvider = (props) => {
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
     if (localStorage.getItem('auth-token')) {
-      fetch('https://ecommerce-backend1-eaty.onrender.com/removefromcart', {
+      fetch('https://ecommerce-backend-ldbc.onrender.com/removefromcart', {
         method: 'POST',
         headers: {
           Accept: 'application/form-data',
@@ -77,7 +77,7 @@ const ShopContextProvider = (props) => {
   const increment = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     if (localStorage.getItem('auth-token')) {
-      fetch('https://ecommerce-backend1-eaty.onrender.com/increment', {
+      fetch('https://ecommerce-backend-ldbc.onrender.com/increment', {
         method: 'POST',
         headers: {
           Accept: 'application/form-data',
@@ -95,7 +95,7 @@ const ShopContextProvider = (props) => {
   const decrement = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
     if (localStorage.getItem('auth-token')) {
-      fetch('https://ecommerce-backend1-eaty.onrender.com/decrement', {
+      fetch('https://ecommerce-backend-ldbc.onrender.com/decrement', {
         method: 'POST',
         headers: {
           Accept: 'application/form-data',
