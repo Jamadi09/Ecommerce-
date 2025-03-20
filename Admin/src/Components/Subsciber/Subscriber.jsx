@@ -7,7 +7,7 @@ function Subscriber() {
     const [subscribers, setsubscribers] = useState([])
 
    useEffect(() =>{
-    fetch("http://localhost:4000/subscribe",{
+    fetch("https://ecommerce-backend-ldbc.onrender.com/subscribe",{
         method:"GET"
     })
     .then((res) =>res.json())
